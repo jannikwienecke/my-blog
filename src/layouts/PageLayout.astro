@@ -18,7 +18,33 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<!DOCTYPE html>
+<script>
+  const sticky = () => {
+    let offset = window.scrollY;
+    const stickys = document.querySelectorAll("body");
+    stickys.forEach((sticky) => {
+      if (sticky) {
+        if (offset > 100) {
+          sticky.classList.add("scrolled");
+        } else {
+          sticky.classList.remove("scrolled");
+        }
+      }
+    });
+  };
+
+  window.addEventListener("scroll", sticky);
+</script>
+
+<!-- const Typed = require("typed.js");
+new Typed(".animated_title", {
+  strings: ["Bruce Wilson", "Web Developer", "Freelancer", "Photographer"],
+  loop: true,
+  smartBackspace: false,
+  typeSpeed: 40,
+  startDelay: 700,
+  backDelay: 3e3,
+}); -->
 <html class="theme-bubblegum" lang="en">
   <head>
     <!-- Global Metadata -->
@@ -32,27 +58,81 @@ import Footer from "../components/Footer.astro";
     <FontAwesome />
   </head>
 
-  <body
-    class="max-w-3xl mx-auto min-h-screen text-text-body bg-bg-body px-6 sm:px-8"
-  >
-    <Header />
-    <main id="main">
-      <slot name="main" />
-    </main>
-    <Footer />
-    <style>
-      body {
-        display: grid;
-        grid-template-areas:
-          "header"
-          "main"
-          "footer";
-        grid-template-rows: 5rem minmax(0, 1fr) 5rem;
-        grid-template-columns: minmax(0, 1fr);
-      }
-      main {
-        grid-area: main;
-      }
-    </style>
+  <body>
+    <!-- <Header /> -->
+    <div id="main">
+      <div class="resumo_fn_wrapper">
+        {/* MODALBOX */}
+        {/* <Modalbox /> */}
+        {/* /MODALBOX */}
+        <div class="resumo_fn_content">
+          {/* Main Left Part */}
+          <div class="resumo_fn_left">
+            {/* Page */}
+            <div class="resumo_fn_page">
+              <slot name="main" />
+            </div>
+            {/* /Page */}
+            <!-- <Footer /> -->
+          </div>
+          {/* /Main Left Part */}
+          {/* Main Right Part */}
+          <div class="resumo_fn_right">
+            <a href="#" class="menu_trigger">
+              <span class="text">Menu</span>
+              <!-- onClick={() => open()} -->
+              <span class="hamb">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </a>
+
+            <div class="right_in">
+              <div class="right_top">
+                <div class="border1"></div>
+                <div class="border2"></div>
+                <div class="img_holder">
+                  <img src="public/images/right.jpg" alt="image" />
+                  <div class="abs_img" data-bg-img="public/images/right.jpg">
+                  </div>
+                </div>
+                <div class="title_holder">
+                  <h5>Hi There! I am</h5>
+                  <p class="h3">
+                    <span class="animated_title"> Web Developer</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="right_bottom">
+                <a href="#contact">
+                  <span class="circle"></span>
+                  <span class="text">
+                    I’m available for a freelance job. Hire me
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            {/* Menu Triggger */}
+            <!-- <Triggger open={() => triggerMenu()} /> -->
+            {/* /Menu Triggger */}
+            {/* Panel Content */}
+            <!-- <PanelContent /> -->
+            {/* /Panel Content */}
+          </div>
+          {/* /Main Right Part */}
+        </div>
+        {/* Right Hidden Navigation */}
+        <!-- <Nav close={() => triggerMenu()} trigger={trigger} /> -->
+        {/* /Right Hidden Navigation */}
+        <!-- <Cursor /> -->
+      </div>
+      {/* /Wrapper All */}
+      {/* Scripts */}
+      {/*[if lt IE 10]>  <![endif]*/}
+      {/* /Scripts */}
+    </div>
   </body>
 </html>

@@ -1,0 +1,66 @@
+<section id="home">
+  <div class="container">
+    <div class="roww">
+      {/* Main Title */}
+      <div class="resumo_fn_main_title">
+        <h3 class="subtitle">Introduction</h3>
+        <h3 class="title">UI/UX Designer</h3>
+        <p class="desc">
+          I design and develop services for customers of all sizes, specializing
+          in creating stylish, modern websites, web services and online stores.
+        </p>
+        <img src="public/images/signature.png" alt="image" />
+      </div>
+      {/* /Main Title */}
+    </div>
+  </div>
+</section>
+
+<style>
+  #home {
+    padding-top: 50px;
+    min-height: inherit;
+    padding-bottom: 0;
+  }
+
+  .resumo_fn_main_title > *:last-child {
+    margin-bottom: 0 !important;
+  }
+  .resumo_fn_main_title .subtitle {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--mc);
+    margin-bottom: 54px;
+  }
+  .resumo_fn_main_title .title {
+    margin: 0;
+    padding: 0;
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 0;
+    padding-bottom: 15px;
+    margin-bottom: 34px;
+    position: relative;
+  }
+  .resumo_fn_main_title .title:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 150px;
+    left: 0;
+  }
+  .resumo_fn_main_title .desc {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    line-height: 44px;
+    letter-spacing: 0;
+    margin-bottom: 57px;
+  }
+</style>
