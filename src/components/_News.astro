@@ -1,0 +1,157 @@
+<section id="news">
+  <div class="container">
+    <div class="roww">
+      {/* Main Title */}
+      <div class="resumo_fn_main_title">
+        <h3 class="subtitle">News &amp; Tips</h3>
+        <h3 class="title">Latest Articles</h3>
+      </div>
+      {/* /Main Title */}
+
+      {/* Blog List */}
+      <div class="resumo_fn_blog_list">
+        <ul class="modal_items" data-from="blog" data-count={5}>
+          <li>
+            <div class="item modal_item" data-index={1}>
+              <!-- <div class="img_holder"> -->
+              <img src="public/images/blog/1.jpg" alt="image" />
+              <div class="title_holder">
+                <p>September 22, 2021</p>
+                <h3>
+                  <a href="#">
+                    Five Solid Evidences Attending Design Is Good For Your
+                    Career Development.
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="item modal_item" data-index={1}>
+              <img src="public/images/blog/1.jpg" alt="image" />
+              <div class="title_holder">
+                <p>September 22, 2021</p>
+                <h3>
+                  <a href="#">
+                    Five Solid Evidences Attending Design Is Good For Your
+                    Career Development.
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="item modal_item" data-index={1}>
+              <img src="public/images/blog/1.jpg" alt="image" />
+              <div class="title_holder">
+                <p>September 22, 2021</p>
+                <h3>
+                  <a href="#">
+                    Five Solid Evidences Attending Design Is Good For Your
+                    Career Development.
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="item modal_item" data-index={1}>
+              <img src="public/images/blog/1.jpg" alt="image" />
+              <div class="title_holder">
+                <p>September 22, 2021</p>
+                <h3>
+                  <a href="#">
+                    Five Solid Evidences Attending Design Is Good For Your
+                    Career Development.
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </li>
+
+          <li class="hidden">
+            <div class="item modal_item" data-index={1}>
+              <img src="public/images/blog/1.jpg" alt="image" />
+              <div class="title_holder">
+                <p>September 22, 2021</p>
+                <h3>
+                  <a href="#">
+                    Five Solid Evidences Attending Design Is Good For Your
+                    Career Development.
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </li>
+
+          <li class="hidden">
+            <div class="item modal_item" data-index={1}>
+              <img src="public/images/blog/1.jpg" alt="image" />
+              <div class="title_holder">
+                <p>September 22, 2021</p>
+                <h3>
+                  <a href="#">
+                    Five Solid Evidences Attending Design Is Good For Your
+                    Career Development.
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+        <div class="load_more">
+          <a
+            id="loadMore"
+            href="#/"
+            data-done="Done"
+            data-no="No more articles found"
+          >
+            <span class="text">Load More Articles</span>
+            <span class="fn__pulse">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // on click loadMore
+  document.getElementById("loadMore")?.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    console.log("CLICK ");
+    console.log(document.getElementById("loadMore"));
+    //     get span with class 'text' and add classname 'loading'
+    document.getElementById("loadMore")?.classList.add("loading");
+
+    window.setTimeout(() => {
+      // remove loading
+      document.getElementById("loadMore")?.classList.remove("loading");
+
+      // get span with class 'text' and set text content to "No more articles found"
+      const text = document.getElementById("loadMore")?.querySelector(".text");
+      if (text) text.textContent = "No more articles found";
+
+      // get all hidden li and remove class hidden
+      const hidden = document.querySelectorAll(".hidden");
+      hidden.forEach((item) => {
+        item.classList.remove("hidden");
+      });
+    }, 1200);
+  });
+</script>
+
+<style>
+  .hidden {
+    display: none;
+  }
+</style>

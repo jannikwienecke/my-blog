@@ -1904,7 +1904,7 @@ a:focus {
 }
 #portfolio .img_holder img {
   margin-bottom: -24%;
-  opacity: 0 !important;
+  /* opacity: 0 !important; */
   max-height: 370px;
 }
 #portfolio .title_holder {
@@ -2224,7 +2224,7 @@ a:focus {
 }
 .resumo_fn_blog_list .img_holder {
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
 }
 .resumo_fn_blog_list .abs_img {
@@ -2241,7 +2241,7 @@ a:focus {
 .resumo_fn_blog_list .img_holder img {
   margin-bottom: -24%;
   min-width: 100%;
-  opacity: 0 !important;
+  /* opacity: 0 !important; */
 }
 .resumo_fn_blog_list .title_holder {
   padding-top: 25px;

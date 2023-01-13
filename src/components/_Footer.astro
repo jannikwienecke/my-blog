@@ -1,0 +1,34 @@
+<script>
+  document
+    .querySelector(".resumo_fn_totop")
+    ?.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+</script>
+
+<footer id="footer">
+  <div class="footer_top">
+    <a href="#/" class="resumo_fn_totop">
+      <span></span>
+    </a>
+  </div>
+  <div class="footer_content">
+    <div class="container">
+      <p>
+        Copyright © {new Date().getFullYear()}. All rights reserved. <br />
+        Developed by{" "}
+        <a
+          class="fn__link"
+          href="https://themeforest.net/user/trendycoder"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Jannik Wienecke
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>

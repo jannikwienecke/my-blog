@@ -6,6 +6,8 @@ import AboutTheTheme from "../components/AboutTheTheme.astro";
 import { SITE_TITLE } from "../config";
 import Home from "src/components/Home.astro";
 import About from "src/components/_About.astro";
+import Form from "src/components/_Form.astro";
+import News from "src/components/_News.astro";
 ---
 
 <PageLayout>
@@ -13,6 +15,8 @@ import About from "src/components/_About.astro";
   <Fragment slot="main">
     <Home />
     <About />
+    <News />
+    <Form />
     <!-- <Intro /> -->
     <!-- <AboutTheTheme /> -->
   </Fragment>

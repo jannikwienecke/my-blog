@@ -1,0 +1,83 @@
+<section id="contact">
+  <div class="container">
+    <div class="roww resumo_fn_contact">
+      <div class="resumo_fn_main_title">
+        <h3 class="subtitle">Contact</h3>
+        <h3 class="title">Get In Touch</h3>
+        <p class="desc">
+          If you have any suggestion, project or even you want to say “hello”,
+          please fill out the form below and I will reply you shortly.
+        </p>
+      </div>
+      {/* /Main Title */}
+      {/* Contact Form */}
+      <form class="contact_form">
+        <div
+          class="success"
+          data-success="Your message has been received, we will contact you soon."
+          style={{ display: "success" ? "block" : "none" }}
+        >
+          <!-- <span class="contact_success">
+            Your message has been received, we will contact you soon.
+          </span> -->
+        </div>
+        <!-- <div class="empty_notice" style={{ display: error ? "block" : "none" }}>
+          <span>Please Fill Required Fields!</span>
+        </div> -->
+        {/* */}
+        <div class="items_wrap">
+          <div class="items">
+            <div class="item half">
+              <div class={`input_wrapper`}>
+                <input name="name" id="name" type="text" />
+                <span class="moving_placeholder">Name *</span>
+              </div>
+            </div>
+            <div class="item half">
+              <div class={`input_wrapper`}>
+                <input
+                  name="email"
+                  id="email"
+                  type="email"
+                  placeholder="Email"
+                />
+              </div>
+            </div>
+            <div class="item">
+              <div class={`input_wrapper`}>
+                <input name="phone" type="text" placeholder="Phone" />
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <textarea name="msg" id="message" placeholder="Message"
+                ></textarea>
+              </div>
+            </div>
+            <div class="item">
+              <input
+                class="a"
+                type="submit"
+                id="send_message"
+                value="Send Message"
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="resumo_fn_contact_info">
+        <p>Address</p>
+        <h3>22307 Hamburg</h3>
+        <p>Phone</p>
+        <h3>
+          <a href="tel:+491713290547">+49 171320547</a>
+        </h3>
+        <p>
+          <a class="fn__link" href="mailto:trendycoder.com@gmail.com">
+            wienecke.jannik@gmail.com
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
