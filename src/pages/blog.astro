@@ -1,9 +1,9 @@
 ---
-import { readAll } from "../lib/markdoc/read";
-import { blog } from "../lib/markdoc/frontmatter.schema";
-import PageLayout from "../layouts/PageLayout.astro";
 import PageMeta from "../components/PageMeta.astro";
 import { SITE_TITLE } from "../config";
+import PageLayout from "../layouts/PageLayout.astro";
+import { blog } from "../lib/markdoc/frontmatter.schema";
+import { readAll } from "../lib/markdoc/read";
 
 const posts = await readAll({
   directory: "blog",
@@ -18,15 +18,13 @@ const sortedPosts = posts
       new Date(a.frontmatter.date).valueOf()
   );
 
-const topics = [
-  "react",
-  "software-design",
-  "TDD",
-  "DDD",
-  "software-architecture",
-  "typescript",
-  "tips",
-  "testing",
+const tags = [
+  ...new Set(
+    sortedPosts
+      .map((post) => post.frontmatter.tags)
+      .flat()
+      .filter(Boolean)
+  ),
 ];
 ---
 
@@ -34,8 +32,6 @@ const topics = [
   const clickedTopics: string[] = [];
 
   document.addEventListener("click", (e: any) => {
-    let wasRemoved = false;
-
     if (e.target.classList.contains("topic-item")) {
       const topic = e.target.dataset.topic;
 
@@ -99,11 +95,11 @@ const topics = [
 <PageLayout>
   <PageMeta title={`Blog | ${SITE_TITLE}`} slot="meta" />
   <section slot="main">
-    <h3>Search Blogs by topics</h3>
+    <h3>Search Blogs by topics1</h3>
 
     <div class="flex flex-row space-x-2 flex-wrap space-y-2">
       {
-        topics.map((topic) => {
+        tags.map((topic) => {
           return (
             <div
               data-topic={topic}
@@ -115,6 +111,8 @@ const topics = [
                 rounded-xl flex justify-center items-center
                 hover:bg-gray-300 hover:border-[2px] hover:border-primary-blue
                 hover:cursor-pointer
+
+                dark:bg-gray-700 dark:border-gray-700 dark:hover:bg-gray-400 dark:hover:border-gray-600
                 
                 `}
             >
@@ -184,5 +182,9 @@ const topics = [
         })
       }
     </ul>
+
+    <!-- <div class="m-auto w-7/12 pt-12">
+      <img src="favicon/logo.png" alt="logo" class="rounded-2xl" />
+    </div> -->
   </section>
 </PageLayout>
