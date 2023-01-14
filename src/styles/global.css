@@ -2465,7 +2465,7 @@ a:focus {
   height: 200px;
 }
 .resumo_fn_contact .items {
-  margin-left: -20px;
+  /* margin-left: -20px; */
 }
 .resumo_fn_contact .item {
   width: 100%;

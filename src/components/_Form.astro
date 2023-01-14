@@ -29,55 +29,91 @@
           <div class="items">
             <div class="item half">
               <div class={`input_wrapper`}>
-                <input name="name" id="name" type="text" />
-                <span class="moving_placeholder">Name *</span>
-              </div>
-            </div>
-            <div class="item half">
-              <div class={`input_wrapper`}>
+                <label for="name">Name</label>
                 <input
-                  name="email"
-                  id="email"
-                  type="email"
-                  placeholder="Email"
+                  name="name"
+                  id="name"
+                  type="text"
+                  placeholder="Please enter your name"
+                  class="email-input"
                 />
               </div>
             </div>
-            <div class="item">
-              <div class={`input_wrapper`}>
-                <input name="phone" type="text" placeholder="Phone" />
-              </div>
-            </div>
-            <div class="item">
-              <div>
-                <textarea name="msg" id="message" placeholder="Message"
-                ></textarea>
-              </div>
-            </div>
-            <div class="item">
+
+            <div class="item half">
+              <div class={`input_wrapper`}></div>
+              <label for="email">Email</label>
               <input
-                class="a"
-                type="submit"
-                id="send_message"
-                value="Send Message"
+                name="email"
+                id="email"
+                type="email"
+                placeholder="Email Address"
+                class="email-input"
               />
             </div>
           </div>
+          <div class="item">
+            <div class={`input_wrapper`}>
+              <label for="email">Email</label>
+              <input
+                class="email-input"
+                name="phone"
+                type="text"
+                placeholder="Phone"
+              />
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <label for="msg">Message</label>
+              <textarea
+                class="email-input"
+                name="msg"
+                id="msg"
+                placeholder="Please leave a message..."></textarea>
+            </div>
+          </div>
+          <div class="item">
+            <input
+              aria-label="Send Message"
+              class="a email-input"
+              type="submit"
+              id="send_message"
+              value="Send Message"
+            />
+          </div>
         </div>
       </form>
-      <div class="resumo_fn_contact_info">
-        <p>Address</p>
-        <h3>22307 Hamburg</h3>
-        <p>Phone</p>
-        <h3>
-          <a href="tel:+491713290547">+49 171320547</a>
-        </h3>
-        <p>
-          <a class="fn__link" href="mailto:trendycoder.com@gmail.com">
-            wienecke.jannik@gmail.com
-          </a>
-        </p>
-      </div>
+    </div>
+    <div class="resumo_fn_contact_info">
+      <p>Address</p>
+      <h3>22307 Hamburg</h3>
+      <p>Phone</p>
+      <h3>
+        <a href="tel:+491713290547">+49 171320547</a>
+      </h3>
+      <p>
+        <a class="fn__link" href="mailto:trendycoder.com@gmail.com">
+          wienecke.jannik@gmail.com
+        </a>
+      </p>
     </div>
   </div>
 </section>
+
+<style>
+  label {
+    margin: 0rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .email-input {
+    margin-top: 0.3rem;
+  }
+
+  input::placeholder {
+    font-size: 0.8rem;
+    color: #999;
+    opacity: 0.5;
+  }
+</style>
