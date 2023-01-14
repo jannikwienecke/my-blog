@@ -9,9 +9,30 @@
           I design and develop services for customers of all sizes, specializing
           in creating stylish, modern websites, web services and online stores.
         </p>
-        <img src="images/signature.png" alt="image" />
+        <div class="signature-container" style="width=100%">
+          <img
+            height="100%"
+            width="100%"
+            src="images/signature.png"
+            alt="image"
+          />
+        </div>
       </div>
-      {/* /Main Title */}
     </div>
+    {/* /Main Title */}
   </div>
 </section>
+
+<style>
+  /* up to 768px */
+
+  .signature-container {
+    width: 70%;
+  }
+
+  @media (max-width: 768px) {
+    .signature-container {
+      width: 100%;
+    }
+  }
+</style>

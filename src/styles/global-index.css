@@ -663,7 +663,8 @@ body {
   letter-spacing: 0;
   font-weight: 400;
   color: #888;
-  background-color: #1d1b19;
+  background-color: rgb(15 23 42);
+  /* background-color: #1d1b19; */
 
   word-break: break-word;
 }
@@ -1531,10 +1532,12 @@ a:focus {
   width: 100%;
   float: left;
   clear: both;
-  background-color: #181715;
+  /* background-color: #181715; */
+  background-color: rgb(51 65 85);
   position: relative;
   padding: 42px 40px 43px;
-  border: 1px solid #151412;
+  /* border: 1px solid #151412; */
+  border: 1px solid rgb(51 65 85);
 }
 .resumo_fn_boxed_list .item:after {
   content: "";
@@ -1584,6 +1587,11 @@ a:focus {
   z-index: 2;
   color: #000;
   font-weight: 600;
+}
+
+.resumo_fn_boxed_list p {
+  color: #ccc;
+  font-size: 0.9rem;
 }
 /*------------------------------------------------------------------*/
 /*	10) Progress Bar
