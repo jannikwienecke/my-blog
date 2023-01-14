@@ -24,7 +24,6 @@ import DarkModeToggle from "src/components/DarkModeToggle.astro";
 
 <script>
   import * as module from "./type.js";
-  console.log(module);
 
   export const aTagClick = () => {
     const aTag = document.querySelectorAll("[href='#']");
@@ -69,7 +68,6 @@ import DarkModeToggle from "src/components/DarkModeToggle.astro";
           i = 0,
           o = !1;
         (window.onmousemove = function (s) {
-          // console.log(document.querySelector(this));
           o ||
             (t.style.transform =
               "translate(" + s.clientX + "px, " + s.clientY + "px)"),
@@ -185,8 +183,8 @@ import DarkModeToggle from "src/components/DarkModeToggle.astro";
                 <div class="border1"></div>
                 <div class="border2"></div>
                 <div class="img_holder">
-                  <img src="images/right.jpg" alt="image" />
-                  <div class="abs_img" data-bg-img="images/right.jpg"></div>
+                  <img src="images/me.jpg" alt="image" />
+                  <div class="abs_img" data-bg-img="images/me.jpg"></div>
                 </div>
                 <div class="title_holder">
                   <h5>Hi There! I am</h5>

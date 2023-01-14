@@ -32,6 +32,8 @@ const tags = [
   const clickedTopics: string[] = [];
 
   document.addEventListener("click", (e: any) => {
+    let wasRemoved = false;
+
     if (e.target.classList.contains("topic-item")) {
       const topic = e.target.dataset.topic;
 

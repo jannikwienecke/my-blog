@@ -14,9 +14,6 @@
       const storageTheme = sessionStorage.getItem("theme");
       const storageThemeMain = localStorage.getItem("theme-main");
 
-      console.log(storageTheme);
-      console.log({ storageThemeMain });
-
       if (!storageTheme && isSystemColorSchemeDark) {
         document.documentElement.classList.add("dark");
       } else if (storageTheme === "dark") {

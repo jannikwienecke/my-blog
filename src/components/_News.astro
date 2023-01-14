@@ -128,9 +128,6 @@
   document.getElementById("loadMore")?.addEventListener("click", function (e) {
     e.preventDefault();
 
-    console.log("CLICK ");
-    console.log(document.getElementById("loadMore"));
-    //     get span with class 'text' and add classname 'loading'
     document.getElementById("loadMore")?.classList.add("loading");
 
     window.setTimeout(() => {
