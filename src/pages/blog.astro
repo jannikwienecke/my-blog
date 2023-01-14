@@ -17,11 +17,116 @@ const sortedPosts = posts
       new Date(b.frontmatter.date).valueOf() -
       new Date(a.frontmatter.date).valueOf()
   );
+
+const topics = [
+  "react",
+  "software-design",
+  "TDD",
+  "DDD",
+  "software-architecture",
+  "typescript",
+  "tips",
+  "testing",
+];
 ---
+
+<script>
+  const clickedTopics: string[] = [];
+
+  document.addEventListener("click", (e: any) => {
+    let wasRemoved = false;
+
+    if (e.target.classList.contains("topic-item")) {
+      const topic = e.target.dataset.topic;
+
+      if (clickedTopics.includes(topic)) {
+        wasRemoved = true;
+      }
+
+      if (clickedTopics.includes(topic)) {
+        clickedTopics.splice(clickedTopics.indexOf(topic), 1);
+      } else {
+        clickedTopics.push(topic);
+      }
+
+      document.querySelectorAll(".topic-item").forEach((post: any) => {
+        let isInList = false;
+
+        if (clickedTopics.includes(post.dataset.topic)) {
+          isInList = true;
+        }
+
+        if (isInList) {
+          post.style.opacity = 1;
+        } else {
+          post.style.opacity = 0.5;
+        }
+      });
+
+      const posts = document.querySelectorAll(".topic-list-item");
+
+      posts.forEach((post: any) => {
+        if (clickedTopics.length === 0) {
+          post.style.display = "block";
+          return;
+        }
+
+        if (!post.dataset["topic"]) {
+          post.style.display = "none";
+          return;
+        }
+
+        const postTopics = post.dataset.topic.split(",");
+
+        let hasAllTopics = true;
+
+        clickedTopics.forEach((clickedTopic) => {
+          if (!postTopics.includes(clickedTopic)) {
+            hasAllTopics = false;
+          }
+        });
+
+        if (hasAllTopics) {
+          post.style.display = "block";
+        } else {
+          post.style.display = "none";
+        }
+      });
+    }
+  });
+</script>
 
 <PageLayout>
   <PageMeta title={`Blog | ${SITE_TITLE}`} slot="meta" />
   <section slot="main">
+    <h3>Search Blogs by topics</h3>
+
+    <div class="flex flex-row space-x-2 flex-wrap space-y-2">
+      {
+        topics.map((topic) => {
+          return (
+            <div
+              data-topic={topic}
+              class={`
+                topic-item 
+                opacity-75
+                border-[2px] border-gray-300
+                bg-gray-200 px-3 py-1 whitespace-nowrap
+                rounded-xl flex justify-center items-center
+                hover:bg-gray-300 hover:border-[2px] hover:border-primary-blue
+                hover:cursor-pointer
+                
+                `}
+            >
+              {topic}
+            </div>
+          );
+        })
+      }
+    </div>
+
+    <br />
+
     <ul>
       {
         sortedPosts.map((post) => {
@@ -33,7 +138,11 @@ const sortedPosts = posts
             day: "numeric",
           });
           return (
-            <li class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3">
+            <li
+              class="topic-list-item"
+              data-topic={post.frontmatter?.tags?.join(",")}
+              class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3"
+            >
               <div class="title">
                 {post.frontmatter.external ? (
                   <a

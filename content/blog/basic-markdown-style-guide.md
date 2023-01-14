@@ -3,6 +3,7 @@ external: false
 title: "Basic markdown style guide"
 description: "You can author content using the familiar markdown syntax you already know. All basic markdown syntax is supported."
 date: 2022-11-02
+tags: ["markdown", "syntax"]
 ---
 
 Markdown is powered by [Markdoc](https://markdoc.dev/). This post is an example to showcase the support of all basic markdown syntax. You can author content using the familiar markdown syntax you already know.

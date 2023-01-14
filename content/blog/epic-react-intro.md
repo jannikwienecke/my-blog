@@ -3,6 +3,7 @@ external: false
 title: "Intro to the EpicReact.dev Course by Kent C. Dodds"
 description: "You can author content using the familiar markdown syntax you already know. All basic markdown syntax is supported."
 date: 2020-12-16
+tags: ["react", "epicreact", "kentcdodds", "review"]
 ---
 
 ##### Hello folks, this first post is a short introduction to my series, reviewing and summarising the epicReact.dev Course by Kent C. Dodds.

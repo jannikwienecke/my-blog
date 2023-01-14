@@ -3,6 +3,7 @@ external: false
 title: "SOLID Principles - Basic Introduction"
 description: "You can author content using the familiar markdown syntax you already know. All basic markdown syntax is supported."
 date: 2023-01-14
+tags: ["SOLID", "Principles", "software-architecture"]
 ---
 
 SOLID is an acronym for five core principles of software development. These principles are considered to be the foundation for creating maintainable and extensible applications. The acronym stands for:
