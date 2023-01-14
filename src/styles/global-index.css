@@ -1,8 +1,4 @@
-/* @import "../public/css/base.css?ver=4";
-@import "../public/css/owl-carousel.css?ver=4";
-@import "../public/css/style.css?ver=4";
-@import "swiper/css"; */
-
+@charset "utf-8";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -620,7 +616,6 @@ section {
   display: table;
 }
 
-@charset "utf-8";
 /*
 /*	Copyright (c) 2021 Frenify
 /*	Author: Frenify
