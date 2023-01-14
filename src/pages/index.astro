@@ -1,6 +1,5 @@
 ---
 import PageMeta from "../components/PageMeta.astro";
-import PageLayout from "../layouts/PageLayout.astro";
 import Intro from "../components/Intro.astro";
 import AboutTheTheme from "../components/AboutTheTheme.astro";
 import { SITE_TITLE } from "../config";
@@ -8,6 +7,7 @@ import Home from "src/components/Home.astro";
 import About from "src/components/_About.astro";
 import Form from "src/components/_Form.astro";
 import News from "src/components/_News.astro";
+import PageLayout from "src/layouts/_PageLayout.astro";
 ---
 
 <PageLayout>
@@ -17,7 +17,5 @@ import News from "src/components/_News.astro";
     <About />
     <News />
     <Form />
-    <!-- <Intro /> -->
-    <!-- <AboutTheTheme /> -->
   </Fragment>
 </PageLayout>

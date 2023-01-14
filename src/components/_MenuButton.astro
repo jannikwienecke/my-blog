@@ -15,7 +15,13 @@
         ?.querySelector(".resumo_fn_wrapper")
         ?.classList.toggle("nav-opened");
 
-      const navItems = ["nav-home", "nav-about", "nav-news", "nav-contact"];
+      const navItems = [
+        "nav-home",
+        "nav-about",
+        "nav-news",
+        "nav-contact",
+        "nav-blog",
+      ];
       navItems.forEach((item, index) => {
         const navItem = document.getElementById(item)!;
         navItem.style.transitionDelay = `${index * 250 + 700}ms`;
