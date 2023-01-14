@@ -19,6 +19,7 @@ import Footer from "../components/_Footer.astro";
 import MenuButton from "src/components/_MenuButton.astro";
 import Cursor from "src/components/_Cursor.astro";
 import Nav from "src/components/_Nav.astro";
+import DarkModeToggle from "src/components/DarkModeToggle.astro";
 ---
 
 <script>
@@ -154,9 +155,13 @@ import Nav from "src/components/_Nav.astro";
     <FontAwesome />
   </head>
 
-  <body class="light1">
+  <body class="dark">
     <!-- <Header /> -->
     <div id="main">
+      <div class="pt-4">
+        <DarkModeToggle />
+      </div>
+
       <div class="resumo_fn_wrapper">
         {/* MODALBOX */}
         {/* <Modalbox /> */}
@@ -186,7 +191,7 @@ import Nav from "src/components/_Nav.astro";
                 <div class="title_holder">
                   <h5>Hi There! I am</h5>
                   <p class="h3">
-                    <span class="animated_title"></span>
+                    <span class="animated_title animated_text"></span>
                   </p>
                 </div>
               </div>
@@ -220,5 +225,14 @@ import Nav from "src/components/_Nav.astro";
       {/*[if lt IE 10]>  <![endif]*/}
       {/* /Scripts */}
     </div>
+    <style>
+      body.dark .animated_text {
+        color: #d4d4d4;
+      }
+
+      body.light .animated_text {
+        color: #000;
+      }
+    </style>
   </body>
 </html>

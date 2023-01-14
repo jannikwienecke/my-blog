@@ -3,6 +3,17 @@
 @import "../public/css/style.css?ver=4";
 @import "swiper/css"; */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Space Grotesk", sans-serif;
+  /* base font-size 1px larger for better visibility */
+  font-size: 1.125em;
+  line-height: 1.85;
+}
+
 .owl-carousel {
   display: block;
 }
@@ -1025,7 +1036,7 @@ a:focus {
   min-height: 100%;
   top: 0;
   bottom: 0;
-  background-color: #181715;
+  background-color: rgb(28 25 23);
   transform: translateX(102%);
   transition: all 1s ease;
   z-index: 999;
@@ -1057,7 +1068,8 @@ a:focus {
   left: 0;
   width: 100%;
   bottom: 0;
-  background-color: #1d1b19;
+  /* background-color: #1d1b19; */
+  background-color: rgb(41 37 36);
   opacity: 0.9;
   transform: translateX(-102%);
   transition: all 1s ease;
@@ -1532,11 +1544,9 @@ a:focus {
   width: 100%;
   float: left;
   clear: both;
-  /* background-color: #181715; */
   background-color: rgb(51 65 85);
   position: relative;
   padding: 42px 40px 43px;
-  /* border: 1px solid #151412; */
   border: 1px solid rgb(51 65 85);
 }
 .resumo_fn_boxed_list .item:after {
@@ -1593,6 +1603,12 @@ a:focus {
   color: #ccc;
   font-size: 0.9rem;
 }
+
+.light .resumo_fn_boxed_list p {
+  color: #111;
+  font-size: 0.9rem;
+}
+
 /*------------------------------------------------------------------*/
 /*	10) Progress Bar
 /*------------------------------------------------------------------*/
@@ -2478,7 +2494,7 @@ a:focus {
 .resumo_fn_contact .item {
   width: 100%;
   float: left;
-  padding-left: 20px;
+  padding-left: 0px;
   margin-bottom: 20px;
 }
 .resumo_fn_contact .item:last-child {
@@ -2551,7 +2567,7 @@ a:focus {
 .resumo_fn_contact_info h3 {
   margin: 0;
   padding: 0;
-  margin-bottom: 58px;
+  margin-bottom: 28px;
   font-weight: 400;
   max-width: 300px;
 }
@@ -2924,8 +2940,7 @@ a:focus {
     padding: 5px;
     right: 10px;
     top: 10px;
-    background-color: #181715;
-    border: 1px solid #151412;
+    background-color: transparent;
   }
   .resumo_fn_navigation {
     width: 100%;
@@ -3493,11 +3508,6 @@ body.light .resumo_fn_modalbox .modal_content::-webkit-scrollbar-thumb {
 }
 .resumo_fn_modalbox .modal_content:-webkit-scrollbar-track {
   background: #111;
-}
-.resumo_fn_modalbox .modal_content::-webkit-scrollbar-thumb {
-  background-color: var(--mc);
-  border-radius: 10px;
-  border: 3px solid #181715;
 }
 .resumo_fn_modalbox .container {
   height: 100vh;

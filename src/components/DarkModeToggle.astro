@@ -1,5 +1,6 @@
 ---
 ---
+
 <button
   class="justify-self-end bg-black dark:bg-white ml-4 inline-flex h-6 w-11 items-center rounded-full"
   id="mode-toggle"
@@ -22,15 +23,30 @@
   document.querySelector("#mode-toggle").addEventListener("click", () => {
     const iconElem = document.querySelector("#mode-circle");
     const isDark = document.documentElement.classList.contains("dark");
+    const isDarkMain = document.body.classList.contains("dark");
+
+    if (isDarkMain) {
+      document.body.classList.remove("dark");
+      document.body.classList.add("light");
+    } else {
+      document.body.classList.remove("light");
+      document.body.classList.add("dark");
+    }
+
+    sessionStorage.setItem("theme-main", isDarkMain ? "light" : "dark");
+    localStorage.setItem("theme-main", isDarkMain ? "light" : "dark");
+
     if (isDark) {
       document.documentElement.classList.remove("dark");
       document.documentElement.classList.add("light");
       iconElem.classList.remove("dark");
       iconElem.classList.add("light");
+
       sessionStorage.setItem("theme", "light");
     } else {
       document.documentElement.classList.remove("light");
       document.documentElement.classList.add("dark");
+
       iconElem.classList.remove("light");
       iconElem.classList.add("dark");
       sessionStorage.setItem("theme", "dark");
