@@ -16,10 +16,111 @@ import ThemeScript from "./ThemeScript.astro";
 import Favicon from "./Favicon.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/_Footer.astro";
+import MenuButton from "src/components/_MenuButton.astro";
+import Cursor from "src/components/_Cursor.astro";
+import Nav from "src/components/_Nav.astro";
 ---
 
 <script>
-  const sticky = () => {
+  import * as module from "./type.js";
+  console.log(module);
+
+  export const aTagClick = () => {
+    const aTag = document.querySelectorAll("[href='#']");
+    for (let i = 0; i < aTag.length; i++) {
+      const a = aTag[i];
+      a.addEventListener("click", (e) => {
+        e.preventDefault();
+      });
+    }
+  };
+  // Data image
+  export const dataImage = () => {
+    let d = document.querySelectorAll("[data-bg-img")!;
+    for (let i = 0; i < d.length; i++) {
+      const element = d[i]! as any;
+      element.style.backgroundImage = `url(${element.getAttribute(
+        "data-bg-img"
+      )})`;
+    }
+  };
+
+  export const customCursor = () => {
+    const myCursor = document.querySelectorAll(".frenify-cursor"),
+      hamburger = document.querySelector(".hamburger"),
+      kura_tm_topbar = document.querySelector(".kura_tm_topbar "),
+      pointer = document.querySelector(".cursor-pointer"),
+      e = document.querySelector(".cursor-inner")! as any;
+
+    const t = document.querySelector(".cursor-outer")! as any;
+
+    function mouseEvent(element: any) {
+      element.addEventListener("mouseenter", function () {
+        e.classList.add("cursor-hover"), t.classList.add("cursor-hover");
+      });
+      element.addEventListener("mouseleave", function () {
+        e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover");
+      });
+    }
+    if (myCursor.length) {
+      if (document.body) {
+        let n,
+          i = 0,
+          o = !1;
+        (window.onmousemove = function (s) {
+          // console.log(document.querySelector(this));
+          o ||
+            (t.style.transform =
+              "translate(" + s.clientX + "px, " + s.clientY + "px)"),
+            (e.style.transform =
+              "translate(" + s.clientX + "px, " + s.clientY + "px)"),
+            (n = s.clientY),
+            (i = s.clientX);
+        }),
+          document.body.addEventListener(
+            "mouseenter",
+            // "a,.kura_tm_topbar .trigger, .cursor-pointer",
+            function () {
+              let a = document.querySelectorAll("a"),
+                sliders = document.querySelectorAll(
+                  ".owl-carousel, .swiper-container, .cursor-link"
+                ),
+                slider = document.querySelectorAll(".modal_item");
+              e.classList.add("cursor-inner"), t.classList.add("cursor-outer");
+
+              for (let i = 0; i < a.length; i++) {
+                const element = a[i];
+                mouseEvent(element);
+              }
+
+              for (let i = 0; i < sliders.length; i++) {
+                const element = sliders[i];
+                element.addEventListener("mouseenter", function () {
+                  e.classList.add("cursor-slider"),
+                    t.classList.add("cursor-slider");
+                });
+                element.addEventListener("mouseleave", function () {
+                  e.classList.remove("cursor-slider"),
+                    t.classList.remove("cursor-slider");
+                });
+              }
+              for (let i = 0; i < slider.length; i++) {
+                const element = slider[i];
+                mouseEvent(element);
+              }
+
+              hamburger && mouseEvent(hamburger);
+              kura_tm_topbar && mouseEvent(kura_tm_topbar);
+              pointer && mouseEvent(pointer);
+            }
+          ),
+          (e.style.visibility = "visible"),
+          (t.style.visibility = "visible");
+      }
+    }
+  };
+
+  export const sticky = () => {
     let offset = window.scrollY;
     const stickys = document.querySelectorAll("body");
     stickys.forEach((sticky) => {
@@ -33,18 +134,13 @@ import Footer from "../components/_Footer.astro";
     });
   };
 
+  dataImage();
+  customCursor();
+  aTagClick();
+
   window.addEventListener("scroll", sticky);
 </script>
 
-<!-- const Typed = require("typed.js");
-new Typed(".animated_title", {
-  strings: ["Bruce Wilson", "Web Developer", "Freelancer", "Photographer"],
-  loop: true,
-  smartBackspace: false,
-  typeSpeed: 40,
-  startDelay: 700,
-  backDelay: 3e3,
-}); -->
 <html class="theme-bubblegum" lang="en">
   <head>
     <!-- Global Metadata -->
@@ -77,15 +173,7 @@ new Typed(".animated_title", {
           {/* /Main Left Part */}
           {/* Main Right Part */}
           <div class="resumo_fn_right">
-            <a href="#" class="menu_trigger">
-              <span class="text">Menu</span>
-              <!-- onClick={() => open()} -->
-              <span class="hamb">
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
-            </a>
+            <MenuButton />
 
             <div class="right_in">
               <div class="right_top">
@@ -98,7 +186,7 @@ new Typed(".animated_title", {
                 <div class="title_holder">
                   <h5>Hi There! I am</h5>
                   <p class="h3">
-                    <span class="animated_title"> Web Developer</span>
+                    <span class="animated_title"></span>
                   </p>
                 </div>
               </div>
@@ -123,9 +211,9 @@ new Typed(".animated_title", {
           {/* /Main Right Part */}
         </div>
         {/* Right Hidden Navigation */}
-        <!-- <Nav close={() => triggerMenu()} trigger={trigger} /> -->
+        <Nav />
         {/* /Right Hidden Navigation */}
-        <!-- <Cursor /> -->
+        <Cursor />
       </div>
       {/* /Wrapper All */}
       {/* Scripts */}

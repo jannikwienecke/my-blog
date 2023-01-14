@@ -1,0 +1,28 @@
+<a href="#" class="menu_trigger">
+  <span class="text">Menu</span>
+  <span class="hamb">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+</a>
+
+<script>
+  document
+    .querySelector(".menu_trigger")
+    ?.addEventListener("click", function () {
+      document
+        ?.querySelector(".resumo_fn_wrapper")
+        ?.classList.toggle("nav-opened");
+
+      const navItems = ["nav-home", "nav-about", "nav-news", "nav-contact"];
+      navItems.forEach((item, index) => {
+        const navItem = document.getElementById(item)!;
+        navItem.style.transitionDelay = `${index * 250 + 700}ms`;
+      });
+
+      setTimeout(() => {
+        document.querySelector(".nav_footer")?.classList.add("ready");
+      }, navItems.length * 250 + 700 + 250);
+    });
+</script>
