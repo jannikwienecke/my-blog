@@ -12,7 +12,7 @@
       <div class="resumo_fn_blog_list">
         <ul class="modal_items" data-from="blog" data-count={5}>
           <li>
-            <div class="item modal_item" data-index={1}>
+            <a href="/blog/SOLID" class="item modal_item" data-index={1}>
               <!-- <div class="img_holder"> -->
               <img
                 loading="lazy"
@@ -29,7 +29,7 @@
                   </a>
                 </h3>
               </div>
-            </div>
+            </a>
           </li>
 
           <li>
@@ -115,7 +115,7 @@
           </li>
 
           <li class="hidden">
-            <div class="item modal_item" data-index={1}>
+            <a class="item modal_item" href="blog/1" data-index={1}>
               <img
                 loading="lazy"
                 style="height: 200px!important; width: 100%!important;"
@@ -133,7 +133,7 @@
                   </a>
                 </h3>
               </div>
-            </div>
+            </a>
           </li>
         </ul>
         <div class="clearfix"></div>
@@ -179,6 +179,8 @@
       });
     }, 1200);
   });
+
+  // on click li inside modal_items
 </script>
 
 <style>

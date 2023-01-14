@@ -48,4 +48,5 @@ Thanks to other templates that inspired this theme.
 ## License
 
 MIT © [Dinesh Pandiyan](https://github.com/flexdinesh)
+
 # my-blog
