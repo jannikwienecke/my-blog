@@ -9,8 +9,8 @@
 - [x] add linkgs from images to blog
 - [x] add links to the real linkedin etc.
 - [ ] change the class names (safe before)
-- [ ] add real texts in german
-- [ ] add part services / why choose me
-- [ ] remove form element
+- [x] add real texts in german
+- [x] add part services / why choose me
+- [x] remove form element
 - [ ] add logo
 - [ ] create domain name (wienecke-web-freelancer)
