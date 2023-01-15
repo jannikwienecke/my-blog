@@ -54,13 +54,13 @@
               <tr>
                 <th>Phone & Whatsapp</th>
                 <th>
-                  <a href="tel:+491713290547">01713290547</a>
+                  <a aria-label="Phone" href="tel:+491713290547">01713290547</a>
                 </th>
               </tr>
               <tr>
                 <th>Email</th>
                 <th>
-                  <a href="mailto:wienecke.jannik@gmail.com">
+                  <a aria-label="Email" href="mailto:wienecke.jannik@gmail.com">
                     wienecke.jannik@gmail.com
                   </a>
                 </th>
@@ -72,7 +72,7 @@
         <div class="about_right">
           {/* Download CV Button */}
           <div class="resumo_fn_cv_btn">
-            <a href="images/lebenslauf.pdf" download>
+            <a aria-label="Download CV" href="images/lebenslauf.pdf" download>
               <span class="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -117,13 +117,15 @@
         <div class="tab_header">
           <ul>
             <li class={"tab1"}>
-              <a id="experience" href="#/"> Experience</a>
+              <a aria-label="Experience" id="experience" href="#/">
+                Experience</a
+              >
             </li>
             <li id="education" class={"tab2"}>
-              <a href="#/"> Education</a>
+              <a aria-label="Education" href="#/"> Education</a>
             </li>
             <li id="skills" class={"tab3"}>
-              <a href="#/">Skills</a>
+              <a aria-label="Skills" href="#/">Skills</a>
             </li>
           </ul>
         </div>
@@ -226,7 +228,7 @@
                   <div class="item">
                     <div class="item_top">
                       <h5>Bamberg University</h5>
-                      <span>( 2011 — 2014 )</span>
+                      <span>( 2016 — 2018 )</span>
                     </div>
                     <h3>Master Degree Wirtschaftsinformatik</h3>
                     <p>
@@ -238,11 +240,23 @@
                     </p>
                   </div>
                 </li>
+
                 <li>
                   <div class="item">
                     <div class="item_top">
-                      <h5>Clolumbia College</h5>
-                      <span>( 2007 — 2011 )</span>
+                      <h5>National University San Diego</h5>
+                      <span>( 2014 — 2014 )</span>
+                    </div>
+                    <h3>Bachelor Degree Business Administration</h3>
+                    <p>Auslandssemester an der University of San Diego State</p>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="item">
+                    <div class="item_top">
+                      <h5>Fachhochschule Hof</h5>
+                      <span>( 2012 — 2016 )</span>
                     </div>
                     <h3>Bachelor Degree Wirtschaftsingenieurswesen</h3>
                     <p>
@@ -254,7 +268,6 @@
                 </li>
               </ul>
             </div>
-            {/* /Boxed List */}
           </div>
 
           <div id="tab3" class={`tab_item`}>
@@ -282,14 +295,27 @@
                   </div>
                 </div>
               </div>
+
               <div class="progress_item open" data-value={90}>
                 <div class="item_in">
-                  <h3 class="progress_title">Html & CSS</h3>
-                  <span class="progress_percent" style={{ right: "10%" }}>
+                  <h3 class="progress_title">Remix</h3>
+                  <span class="progress_percent" style={{ right: "20%" }}>
                     80%
                   </span>
                   <div class="bg_wrap">
-                    <div class="progress_bg" style={{ width: "90%" }}></div>
+                    <div class="progress_bg" style={{ width: "80%" }}></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="progress_item open" data-value={90}>
+                <div class="item_in">
+                  <h3 class="progress_title">Html & CSS</h3>
+                  <span class="progress_percent" style={{ right: "20%" }}>
+                    80%
+                  </span>
+                  <div class="bg_wrap">
+                    <div class="progress_bg" style={{ width: "80%" }}></div>
                   </div>
                 </div>
               </div>
@@ -301,6 +327,18 @@
                   </span>
                   <div class="bg_wrap">
                     <div class="progress_bg" style={{ width: "85%" }}></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="progress_item open" data-value={80}>
+                <div class="item_in">
+                  <h3 class="progress_title">Python</h3>
+                  <span class="progress_percent" style={{ right: "20%" }}>
+                    80%
+                  </span>
+                  <div class="bg_wrap">
+                    <div class="progress_bg" style={{ width: "80%" }}></div>
                   </div>
                 </div>
               </div>
