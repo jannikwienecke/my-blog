@@ -8,6 +8,7 @@ import ThemeScript from "./ThemeScript.astro";
 import Favicon from "./Favicon.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Hero from "src/components/hero.astro";
 ---
 
 <!DOCTYPE html>
@@ -24,11 +25,18 @@ import Footer from "../components/Footer.astro";
     <FontAwesome />
   </head>
 
-  <body
-    class="max-w-3xl mx-auto min-h-screen text-text-body bg-bg-body px-6 sm:px-8"
-  >
-    <Header />
+  <body class="bg-bg-body">
+    <div
+      class="max-w-3xl mx-auto text-text-body bg-bg-body px-6 sm:px-8 w-full"
+    >
+      <Header />
+    </div>
+
     <main id="main">
+      <section aria-label="hero h-screen">
+        <Hero />
+      </section>
+
       <slot name="main" />
     </main>
     <Footer />

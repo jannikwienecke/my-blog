@@ -96,8 +96,12 @@ const tags = [
 
 <PageLayout>
   <PageMeta title={`Blog | ${SITE_TITLE}`} slot="meta" />
-  <section slot="main">
-    <h3>Search Blogs by topics1</h3>
+
+  <section
+    slot="main"
+    class="max-w-3xl mx-auto min-h-screen text-text-body bg-bg-body px-6 sm:px-8"
+  >
+    <h3>Search Blogs by topics</h3>
 
     <div class="flex flex-row space-x-2 flex-wrap space-y-2">
       {
@@ -113,7 +117,7 @@ const tags = [
                 rounded-xl flex justify-center items-center
                 hover:bg-gray-300 hover:border-[2px] hover:border-primary-blue
                 hover:cursor-pointer
-
+                text-text-body
                 dark:bg-gray-700 dark:border-gray-700 dark:hover:bg-gray-400 dark:hover:border-gray-600
                 
                 `}
@@ -184,9 +188,9 @@ const tags = [
         })
       }
     </ul>
+  </section>
 
-    <!-- <div class="m-auto w-7/12 pt-12">
+  <!-- <div class="m-auto w-7/12 pt-12">
       <img src="favicon/logo.png" alt="logo" class="rounded-2xl" />
     </div> -->
-  </section>
 </PageLayout>
