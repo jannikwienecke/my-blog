@@ -8,6 +8,8 @@ import About from "src/components/_About.astro";
 import Form from "src/components/_Form.astro";
 import News from "src/components/_News.astro";
 import PageLayout from "src/layouts/_PageLayout.astro";
+import Matching from "src/components/_Matching.astro";
+import NotMatching from "src/components/_NotMatching.astro";
 ---
 
 <PageLayout>
@@ -15,6 +17,8 @@ import PageLayout from "src/layouts/_PageLayout.astro";
   <Fragment slot="main">
     <Home />
     <About />
+    <Matching />
+    <NotMatching />
     <News />
     <Form />
   </Fragment>
