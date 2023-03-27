@@ -17,7 +17,7 @@ const SERVER_PORT = 3000;
 // the url to access your blog during local development
 const LOCALHOST_URL = `http://localhost:${SERVER_PORT}`;
 // the url to access your blog after deploying it somewhere (Eg. Netlify)
-const LIVE_URL = "https://yourwebsiteurl.com";
+const LIVE_URL = "https://wienecke-web-freelancer.de";
 // this is the astro command your npm script runs
 const SCRIPT = process.env.npm_lifecycle_script || "";
 const isBuild = SCRIPT.includes("astro build");
@@ -32,12 +32,16 @@ if (isBuild) {
 // https://astro.build/config
 export default defineConfig({
   server: {
-    port: SERVER_PORT
+    port: SERVER_PORT,
   },
   site: BASE_URL,
-  integrations: [sitemap(), tailwind({
-    config: {
-      applyBaseStyles: false
-    }
-  }), preact()]
+  integrations: [
+    sitemap(),
+    tailwind({
+      config: {
+        applyBaseStyles: false,
+      },
+    }),
+    preact(),
+  ],
 });

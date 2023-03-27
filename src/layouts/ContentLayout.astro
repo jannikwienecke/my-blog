@@ -40,6 +40,8 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
     <GoogleFont />
     <ThemeScript />
     <FontAwesome />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
 
   <body
@@ -49,10 +51,9 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
     <main id="main">
       <section class="blog-post prose max-w-none prose-bubblegum">
         <h1 class="m-0 mb-[0.25em]">
-          <span class="
-              pl-6 relative block leading-[150%]
-              after:absolute after:content-[''] after:w-2 after:h-full after:top-0 after:left-0 after:bg-primary-green
-            ">
+          <span
+            class="pl-6 relative block leading-[150%] after:absolute after:content-[''] after:w-2 after:h-full after:top-0 after:left-0 after:bg-primary-green"
+          >
             {title}
           </span>
         </h1>

@@ -1,10 +1,11 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = "Wienecke | Freelancer | Web Developer";
+export const SITE_TITLE = "Wienecke | Freelancer | Web Entwickler";
 export const SITE_DESCRIPTION =
-  "Freelancer And Webdeveloper. Available for freelance job. Welcome to my portfolio.";
-export const TWITTER_HANDLE = "@yourtwitterhandle";
+  "Freiberuflicher Webentwickler aus Hamburg, Deutschland. Verfügbar für freiberufliche Projekte. Willkommen auf meinem Portfolio.";
+
+export const TWITTER_HANDLE = "@jannikwiencke";
 export const MY_NAME = "Jannik Wiencke";
 
 // setup in astro.config.mjs
