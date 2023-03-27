@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://wienecke-web-freelancer.de/sitemap-index.xml
