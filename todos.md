@@ -12,5 +12,8 @@
 - [x] add real texts in german
 - [x] add part services / why choose me
 - [x] remove form element
-- [ ] add logo
-- [ ] create domain name (wienecke-web-freelancer)
+- [x] add logo
+- [x] create domain name (wienecke-web-freelancer)
+- [ ] change nav artikel
+- [ ] make words bold
+- [ ] change open for freelance in seo
