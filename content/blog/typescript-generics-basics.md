@@ -16,8 +16,6 @@ In this post, we'll explore some basic examples of how generics work in TypeScri
 
 Let's start with a simple example of a function that takes in a generic type `T` and returns it. This means that the function can be used with any type, and will return the same type that was passed in.
 
-typescript
-
 ```typescript
 const returnWhatIPassIn = <T>(t: T): T => {
   return t;
@@ -25,8 +23,6 @@ const returnWhatIPassIn = <T>(t: T): T => {
 ```
 
 We can test this function with both a number and a string:
-
-typescript
 
 ```typescript
 const one = returnWhatIPassIn(1); // returns 1
@@ -39,23 +35,17 @@ The function simply returns the value that is passed in, no matter what type it 
 
 The "extends" keyword can be used to constrain the types that a generic function can accept. For example, we can write a function that only accepts string inputs:
 
-typescript
-
 ```typescript
 const returnWhatIPassInStrings = <T extends string>(t: T): T => t;
 ```
 
 This function takes in a generic type `T` that extends `string`, and returns `t`. We can test this function with a string:
 
-typescript
-
 ```typescript
 const a = returnWhatIPassInStrings("a"); // returns "a"
 ```
 
 However, if we try to pass in a number, we'll get a TypeScript error:
-
-typescript
 
 ```typescript
 // @ts-expect-error
@@ -68,8 +58,6 @@ This is because the function only accepts strings, and we're trying to pass in a
 
 We can also use multiple generic parameters in TypeScript functions. For example, we can write a function that takes in two generic parameters `T` and `L`, and returns an object with both values:
 
-typescript
-
 ```typescript
 const returnBothOfWhatIPassIn = <T, L>(a: T, b: L) => {
   return {
@@ -81,8 +69,6 @@ const returnBothOfWhatIPassIn = <T, L>(a: T, b: L) => {
 
 We can test this function with a number and a string:
 
-typescript
-
 ```typescript
 returnBothOfWhatIPassIn(1, "test"); // returns { a: 1, b: "test" }
 ```
@@ -92,8 +78,6 @@ The function returns an object with `a` and `b` properties, with their correspon
 ### Generics in Classes
 
 Generics can also be used in TypeScript classes to create more reusable code. For example, we can write a class that takes a generic parameter `T` and has a method to return the value of that parameter:
-
-typescript
 
 ```typescript
 export class Component<T> {
@@ -109,15 +93,11 @@ export class Component<T> {
 
 We can create an instance of this class with an object as the generic parameter:
 
-typescript
-
 ```typescript
 const component = new Component({ a: 1, b: 2, c: 3 });
 ```
 
 And we can call the `getProps()` method to get the value of the generic parameter:
-
-typescript
 
 ```typescript
 component.getProps(); // returns { a: 1, b: 2, c: 3 }
@@ -130,8 +110,6 @@ This class is reusable because it can work with any type that is passed in as th
 Let's look at a real-world example of how generics can be useful. Suppose we have a `User` type with `firstName` and `lastName` properties, and we want to add a `fullName` property that concatenates the first and last names.
 
 We can write a generic mapper function that accepts a `User` object and returns a new object with the `fullName` property added:
-
-typescript
 
 ```typescript
 type User = {
@@ -148,8 +126,6 @@ export const concatenateFirstNameAndLastName = <T extends User>(user: T) => {
 ```
 
 We can test this function with a `User` object:
-
-typescript
 
 ```typescript
 const user = { firstName: "John", lastName: "Doe" };
