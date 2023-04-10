@@ -1,12 +1,10 @@
 ---
 external: false
-title: "Expanding Your TypeScript Toolkit"
+title: "Expanding Your TypeScript Toolkit. Mastering Generics Through Practical Examples"
 description: "Expanding Your TypeScript Toolkit: Mastering Generics Through Practical Examples"
 date: 2023-04-10
 tags: ["typescript"]
 ---
-
-# Expanding Your TypeScript Toolkit: Mastering Generics Through Practical Examples
 
 ## Introduction:
 
@@ -146,3 +144,5 @@ const func = makeSafe(() => 1);
 # Conclusion:
 
 TypeScript generics offer an effective way to create reusable and flexible components that can work with different data types. Through these real-world examples, we've demonstrated the power and versatility of generics in solving problems and improving code quality and maintainability. By understanding and applying generics, TypeScript developers can create more robust, reliable, and maintainable code in their projects.
+
+These examples were inspired by Matt Pocock's Total TypeScript course, which provides a comprehensive guide to TypeScript from beginner to advanced topics. If you're interested in learning more about TypeScript, we highly recommend checking out Matt's course at https://www.totaltypescript.com/. With TypeScript's powerful features like generics, you can write more efficient and reusable code than ever before. Happy coding!"
