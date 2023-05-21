@@ -106,7 +106,7 @@ You can embed YouTube videos in your blog posts.
 
 You can embed tweets in your blog posts.
 
-{% tweet url="https://twitter.com/flexdinesh/status/1605685194312122370" /%}
+{% tweet url="https://www.linkedin.com/in/jannik-wienecke-79307618b/" /%}
 
 ## CodePen
 
