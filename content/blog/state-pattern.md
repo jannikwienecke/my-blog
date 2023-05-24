@@ -131,8 +131,13 @@ class TrafficLightController {
 const TrafficLight: React.FC<{ controller: TrafficLightController }> = ({
   controller,
 }) => {
+  const [currentState, setCurrentState] = useState(
+    controller.getCurrentStateName()
+  );
+
   const handleAction = () => {
     controller.handleAction();
+    setCurrentState(controller.getCurrentStateName());
   };
 
   return (
